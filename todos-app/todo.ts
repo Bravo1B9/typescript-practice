@@ -48,6 +48,12 @@ class SubTask {
   }
 }
 
+class User {
+  id: number;
+  name: string;
+  todos: Todo[];
+}
+
 let todos: Todo[] = [];
 
 let nextTodoId: number = 1;

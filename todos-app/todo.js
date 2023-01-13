@@ -38,6 +38,11 @@ var SubTask = /** @class */ (function () {
     }
     return SubTask;
 }());
+var User = /** @class */ (function () {
+    function User() {
+    }
+    return User;
+}());
 var todos = [];
 var nextTodoId = 1;
 /*

@@ -52,6 +52,11 @@ class User {
   id: number;
   name: string;
   todos: Todo[];
+
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
+  }
 }
 
 let todos: Todo[] = [];

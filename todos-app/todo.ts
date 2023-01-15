@@ -57,11 +57,22 @@ class User {
     this.id = id;
     this.name = name;
   }
+
+  addTodo(todo: Todo) {
+    todos.push(todo);
+  }
 }
 
 let todos: Todo[] = [];
+let users: User[] = [];
 
 let nextTodoId: number = 1;
+let nextUserId: number = 1;
+
+const createUser = (name: string) => {
+  const newUser = new User(nextUserId, name);
+  users.push(newUser);
+}
 
 /*
   Todo operations

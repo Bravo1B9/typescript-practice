@@ -39,12 +39,26 @@ var SubTask = /** @class */ (function () {
     return SubTask;
 }());
 var User = /** @class */ (function () {
-    function User() {
+    function User(id, name) {
+        this.id = id;
+        this.name = name;
     }
+    User.prototype.addTodo = function (todo) {
+        todos.push(todo);
+    };
+    User.prototype.getTodos = function () {
+        console.log(this.todos);
+    };
     return User;
 }());
 var todos = [];
+var users = [];
 var nextTodoId = 1;
+var nextUserId = 1;
+var createUser = function (name) {
+    var newUser = new User(nextUserId, name);
+    users.push(newUser);
+};
 /*
   Todo operations
 */

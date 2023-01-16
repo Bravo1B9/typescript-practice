@@ -61,6 +61,10 @@ class User {
   addTodo(todo: Todo) {
     todos.push(todo);
   }
+
+  getTodos() {
+    console.log(this.todos);
+  }
 }
 
 let todos: Todo[] = [];

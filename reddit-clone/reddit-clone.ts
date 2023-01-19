@@ -1,11 +1,31 @@
-class User {
+interface User {
   userId: number;
-  posts: Post[] = [];
+  email: string;
+  password: string;
+  post: Post[]
 }
 
-class Post {
+interface Post {
   postId: number;
+  title: string;
   postType: PostType;
+}
+
+let nextUserId = 1;
+let users: User[] = [];
+
+const createUser = (email: string, password: string) => {
+  const newUser: User = {
+    userId: nextUserId,
+    email,
+    password,
+    post: [],
+  }
+  users.push(newUser)
+}
+
+const getUsers = () => {
+  console.log(users);
 }
 
 enum PostType {
@@ -13,3 +33,6 @@ enum PostType {
   Image,
   Link,
 }
+
+createUser("b1@xgmi", "pass123");
+getUsers();
